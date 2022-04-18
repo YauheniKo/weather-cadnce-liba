@@ -3,10 +3,11 @@ package byb.weather.cadence.liba.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class WeatherMapDTO {
+public class WeatherMapDTO implements Serializable {
 
     private WeatherMapMainDto main;
 

@@ -2,7 +2,9 @@ package byb.weather.cadence.liba.workflow.service;
 
 import com.uber.cadence.workflow.WorkflowMethod;
 
-public interface WeatherWorkflowService {
+import java.io.Serializable;
+
+public interface WeatherWorkflowService extends Serializable {
     String workflowTaskList = "WorkflowTaskList";
 
     @WorkflowMethod(executionStartToCloseTimeoutSeconds = 120, taskList = workflowTaskList)
